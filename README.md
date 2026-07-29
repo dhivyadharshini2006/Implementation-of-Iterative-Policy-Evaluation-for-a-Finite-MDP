@@ -154,7 +154,7 @@ env.close()
 ---
 
 ## Output
-
+## When gamma=0.99
 ### Number of Iterations:
 
 <img width="530" height="161" alt="image" src="https://github.com/user-attachments/assets/dec1226e-5043-4a8a-89d0-5675a6c8b4ff" />
@@ -164,6 +164,17 @@ env.close()
 
 <img width="306" height="157" alt="image" src="https://github.com/user-attachments/assets/a42828fd-43fc-4d78-90f4-60cc5175c7c4" />
 
+
+
+## When gamma=0.97
+### Number of Iterations:
+<img width="520" height="158" alt="image" src="https://github.com/user-attachments/assets/7b156282-4a48-4937-a371-e583a5462490" />
+
+
+
+### State-Value Function as 4x4 Grid:
+
+<img width="317" height="160" alt="image" src="https://github.com/user-attachments/assets/ec9f3b81-6e60-487e-ab55-5c7d7c3b5bda" />
 
 ---
 
@@ -175,16 +186,16 @@ Iterative policy evaluation was implemented successfully using the Gymnasium Fro
 
 ## Inference
 
+1. When the discount factor **γ = 0.99**, the agent gives greater importance to future rewards, resulting in higher state-value estimates.
 
-1. The iterative policy evaluation algorithm successfully estimated the state-value function for the FrozenLake-v1 environment under a fixed random policy. 
+2. When **γ** is reduced to **0.97**, future rewards are discounted more, so the computed state values become slightly lower.
 
-2. By repeatedly applying the Bellman expectation equation, the value function converged after a finite number of iterations. The computed state values represent the expected long-term return from each state when the agent follows the random policy.
+3. The value function converges for both discount factors, but **γ = 0.97** generally converges in fewer iterations than **γ = 0.99**.
 
-3. States that are closer to the goal or have a higher probability of reaching the goal obtained larger state values, whereas hole states and terminal states retained a value of zero. 
+4. The overall pattern of the state-value function remains the same in both cases, with states closer to the goal having higher values than distant states.
 
+5. This experiment shows that the **discount factor (γ)** affects both the magnitude of the estimated state values and the convergence speed of the iterative policy evaluation algorithm.
 
-
-4. This experiment demonstrates how iterative policy evaluation computes the expected utility of each state without improving or changing the policy, providing a foundation for reinforcement learning methods such as policy iteration and value iteration.
 
 
 
