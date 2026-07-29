@@ -176,7 +176,15 @@ Iterative policy evaluation was implemented successfully using the Gymnasium Fro
 ## Inference
 
 
-The iterative policy evaluation algorithm successfully estimated the state-value function for the FrozenLake-v1 environment under a fixed random policy. By repeatedly applying the Bellman expectation equation, the value function converged after a finite number of iterations. The computed state values represent the expected long-term return from each state when the agent follows the random policy. States that are closer to the goal or have a higher probability of reaching the goal obtained larger state values, whereas hole states and terminal states retained a value of zero. This experiment demonstrates how iterative policy evaluation computes the expected utility of each state without improving or changing the policy, providing a foundation for reinforcement learning methods such as policy iteration and value iteration.
+1. The iterative policy evaluation algorithm successfully estimated the state-value function for the FrozenLake-v1 environment under a fixed random policy. 
+
+2. By repeatedly applying the Bellman expectation equation, the value function converged after a finite number of iterations. The computed state values represent the expected long-term return from each state when the agent follows the random policy.
+
+3. States that are closer to the goal or have a higher probability of reaching the goal obtained larger state values, whereas hole states and terminal states retained a value of zero. 
+
+
+
+4. This experiment demonstrates how iterative policy evaluation computes the expected utility of each state without improving or changing the policy, providing a foundation for reinforcement learning methods such as policy iteration and value iteration.
 
 
 
